@@ -25,7 +25,7 @@ contract Greeter {
         return a + b;
     }
 
-    function subtractNum(uint256 a, uint256 b) public pure returns (uint256) {
-        return a * b;
+    function subtractNum(int256 a, int256 b) public pure returns (int256) {
+        return a - b;
     }
 }

@@ -23,4 +23,11 @@ describe("Greeter", function () {
     const testSumOfNums = await contract.addNum(2, 6);
     expect(testSumOfNums).to.equal(8);
   });
+  it("Should return the difference of two numbers", async function () {
+    const Greeter = await ethers.getContractFactory("Greeter");
+    const greeter = await Greeter.deploy("Hello, world!");
+    const contract = await greeter.deployed();
+    const testDiffOfNums = await contract.subtractNum(2, 6);
+    expect(testDiffOfNums).to.equal(-4);
+  });
 });
